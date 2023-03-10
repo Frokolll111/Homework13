@@ -28,20 +28,21 @@ public class Book {
     }
 
     @Override
-    public String toString() {
-        return "Название книги - " + this.title + ", Автор книги - " + this.author + ", год издания - " + this.year;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Book book = (Book) o;
+        return title.equals(book.title);
     }
 
-    @Override
-    public boolean equals(Object other) {
-        if (this.getClass() != other.getClass()) {
-            return false;
-        }
-        Book title1 = (Book) other;
-        return title.equals(title1.title);
-    }
     @Override
     public int hashCode() {
         return Objects.hash(title);
     }
+
+    @Override
+    public String toString() {
+        return "Название книги - " + this.title + ", Автор книги - " + this.author + ", год издания - " + this.year;
+    }
+
 }

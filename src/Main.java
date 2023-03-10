@@ -12,8 +12,8 @@ public class Main {
         System.out.println(new Book("Java для чайников",new Author("Барри","Бёрд"), 2019));
         book2.setYear(2020);
         System.out.println("Год переиздания книги - " + book2.getYear());
-        Author c = new Author("Энн ", "Фрейзер");
-        Author c2 = new Author("Барри", "Бёрд");
+        Author c = new Author("Энн", "Фрейзер");
+        Author c2 = new Author("Энн", "Фрейзер");
         System.out.println(c.equals(c2));
         Book c3 = new Book("Найди меня ", new Author("Энн", "Фрейзер"), 2022);
         Book c4 = new Book("Найди меня ", new Author("Барри", "Бёрд"), 2022);
